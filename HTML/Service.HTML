@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  margin: 10px 0;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+}
+
+input {
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  font-size: 24px;
+}
+
+</style>
+<body>
+<div>
+  <label for="distance">Distance (km):</label>
+  <input type="number" id="distance" name="distance">
+</div>
+
+<div>
+  <label for="fuelCostPerKm">Fuel Cost per km:</label>
+  <input type="number" id="fuelCostPerKm" name="fuelCostPerKm" step="0.01">
+</div>
+
+<div>
+  <label for="fixedProfit">Fixed Profit:</label>
+  <input type="number" id="fixedProfit" name="fixedProfit">
+</div>
+
+<div>
+  <label for="numPassengers">Number of Passengers:</label>
+  <input type="number" id="numPassengers" name="numPassengers">
+</div>
+
+<button type="button" onclick="calculateBusFare()">Calculate</button>
+
+<div>
+  <h2>Bus Fare per Person:</h2>
+  <p id="result"></p>
+</div>
+
+
+
+<script>
+
+function calculateBusFare() {
+  const distance = document.getElementById("distance").value;
+  const fuelCostPerKm = document.getElementById("fuelCostPerKm").value;
+  const fixedProfit = document.getElementById("fixedProfit").value;
+  const numPassengers = document.getElementById("numPassengers").value;
+  
+  const busFarePerPerson = (distance * fuelCostPerKm) + (fixedProfit / numPassengers);
+  
+  document.getElementById("result").innerHTML = `$${busFarePerPerson.toFixed(2)} per person`;
+}
+
+
+
+</script>
+</body>
+</html>
+
+

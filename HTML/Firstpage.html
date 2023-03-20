@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Box</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Webpage icon -->
+  <link rel="shortcut icon" type="x-icon" href="../Photos/ZeNaS.jpg">
+  <!--  -->
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="../JavaScript/Java.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar Bar -->
+  <navbar>
+    <div class="logo"> Transit&nbsp;<span>Pay</span></div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="About.HTML">About US</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">GPS</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+  </navbar>
+
+  <div class="background">
+    <div class="image-caption">
+      <p class="quote-text">"Elevate your transit experience with our effortless payment options."</p>
+      <p class="small">Transit payments made simple, fast, and secure.</p>
+
+      <!-- Icone -->
+      <div class="Icone">
+        <a href="Index.HTML"><span class="fas fa-arrow-down"></span> </a>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- JavaScript -->
+<script>
+// Quotes animation of Firstpage
+const quoteText = document.querySelector(".quote-text");
+    const small = document.querySelector(".small");
+
+    let quote = quoteText.textContent;
+    let author = small.textContent;
+
+    quoteText.textContent = "";
+    small.textContent = "";
+
+    let i = 0;
+    let j = 0;
+    let speed = 50;
+
+    function typeWriter() {
+      if (i < quote.length) {
+        quoteText.textContent += quote.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        if (j < author.length) {
+          small.textContent += author.charAt(j);
+          j++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    }
+
+    typeWriter();
+
+
+</script>
+
+</body>
+</html>

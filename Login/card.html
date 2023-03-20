@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <div class="content">
+            <h1 class="logo"><i class='bx bxl-firebase'></i>Transit Pay</h1>
+
+            <p class="we_Accept">WE ACCEPTS</p>
+
+                        <img src="../Photos/payment.png" alt="Payment-Service" class="payment_Photo">
+
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="logreg-box">
+                <div class="form-box">
+                    <form action="#">
+                        <h2>Payment Information</h2>
+                        
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-id-card'></i></span>
+                            <input type="text" required id="card_Name">
+                            <label class="move_Name">Card Holder Name</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'> </i></span>
+                            <input type="text" required id="card_Number">
+                            <label class="move_Card">Card Number</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-calendar-exclamation'></i></span>
+                            <input type="number" required id="expiry_Date">
+                            <label class="move_Expiry">Expiry Date</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user-check'></i></span>
+                            <input type="code" required id="security_code">
+                            <label class="move_Cvv">CVV</label>
+                        </div>
+                        
+                        <button type="submit" class="btn">Sign Up</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login</title>
+</head>
+
+<body>
+
+
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <div class="content">
+            <h1 class="logo"><i class='bx bxl-firebase'></i>Transit Pay</h1>
+
+
+            <div class="text-sci">
+                <h2>Welcome! <br> <span>Transit Pay simplifies your life</span></h2>
+
+                <p>Sign up to Transit Pay and ride hassle-free</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="logreg-box">
+                <div class="form-box Login">
+                    <form action="#" id="signin_Form">
+                        <h2>Sign In</h2>
+
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'> </i></span>
+                            <input type="text" required id="email">
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" required id="password">
+                            <label class="move">Password</label>
+                        </div>
+
+
+                        <div class="remember-forgot">
+                            <label> <input type="checkbox"> Remember me </label>
+                            <a href="forgot.html">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn">Sign In</button>
+
+                        <div class="login-register">
+                            <p>Don't have an account?
+                                <a href="#" class="register-link">Sign up</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-box register">
+                    <form action="#">
+                        <h2>Sign Up</h2>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'> </i></span>
+                            <input type="text" required>
+                            <label>Name</label>
+                        </div>
+
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'> </i></span>
+                            <input type="text" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" required>
+                            <label class="move">Password</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-calendar-alt'></i></span>
+                            <input type="Date-OF-Birth" required>
+                            <label class="move">Birth Date</label>
+                        </div>
+
+
+                        <div class="remember-forgot">
+                            <label> <input type="checkbox"> I agree to the term & condition </label>
+                        </div>
+
+                        <button id="button" class="next">Next</button>
+
+                        <div class="login-register">
+                            <p>Already have an account?
+                                <a href="" class="login-link">Sign In</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const nextButton = document.getElementById("button");
+
+            nextButton.addEventListener("click", () => {
+                window.location.href = "card.html";
+            });
+        </script>
+
+
+</body>
+
+</html>

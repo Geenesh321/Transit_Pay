@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Transit Pay</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="logo_AboutUS">
+        About&nbsp;<span>US</span></div>
+    </div>
+
+    <!-- Starting Line of About US page -->
+    <div class="Quotes_AboutUS">
+        <pre class="pre">
+    "At Transit Pay, we're passionate about creating innovative solutions
+                      that simplify the payment process and make
+                                it easier for people to get around."
+    </pre>
+    </div>
+
+    <!-- Card -->
+    <div class="about_Container">
+        <!--  -->
+        <div class="card">
+            <div class="imgBx" data-text="Intro">
+                <img src="../Photos/sketch.png">
+            </div>
+            <div class="about_content">
+                <div>
+                    <h3>Introduction</h3>
+                    <button id="read-more-btn1">Read More</button>
+
+                    <div id="popup-container">
+                        <div id="popup">
+                            <button id="close-btn">&times;</button>
+                            <p>Popup Content Goes Here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="card">
+            <div class="imgBx" data-text="Function">
+                <img src="../Photos/data.png">
+            </div>
+            <div class="about_content">
+                <div>
+                    <h3>How it works</h3>
+                    <button id="read-more-btn2">Read More</button>
+                    <div id="popup-container">
+                        <div id="popup">
+                            <button id="close-btn">&times;</button>
+                            <p>Popup Content Goes Here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="card">
+            <div class="imgBx" data-text="Security">
+                <img src="../Photos/data.png">
+            </div>
+            <div class="about_content">
+                <div>
+                    <h3>Security</h3>
+                    <button id="read-more-btn3">Read More</button>
+
+                    <div id="popup-container">
+                        <div id="popup">
+                            <button id="close-btn">&times;</button>
+                            <p>Popup Content Goes Here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="card">
+            <div class="imgBx" data-text="Aims">
+                <img src="../Photos/greenhouse.png">
+            </div>
+            <div class="about_content">
+                <div>
+                    <h3>Aims</h3>
+                    <button id="read-more-btn4">Read More</button>
+                    <div id="popup-container">
+                        <div id="popup">
+                            <button id="close-btn">&times;</button>
+                            <p>Popup Content Goes Here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const readMoreBtn1 = document.getElementById('read-more-btn1');
+        const readMoreBtn2 = document.getElementById('read-more-btn2');
+        const readMoreBtn3 = document.getElementById('read-more-btn3');
+        const readMoreBtn4 = document.getElementById('read-more-btn4');
+
+        const popupContainer = document.getElementById('popup-container');
+        const closeBtn = document.getElementById('close-btn');
+
+        readMoreBtn1.addEventListener('click', function () {
+            popupContainer.style.display = 'block';
+        });
+
+        readMoreBtn2.addEventListener('click', function () {
+            popupContainer.style.display = 'block';
+        });
+        readMoreBtn3.addEventListener('click', function () {
+            popupContainer.style.display = 'block';
+        });
+        readMoreBtn4.addEventListener('click', function () {
+            popupContainer.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', function () {
+            popupContainer.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>

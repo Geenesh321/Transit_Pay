@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Transit Pay</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../JavaScript/Java.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <nav>
+    <div class="logo"> Transit&nbsp;<span>Pay</span></div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="About.HTML">About US</a></li>
+      <li><a href="Service.HTML">Services</a></li>
+      <li><a href="GPS.HTML">GPS</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <div class="container">     
+      <img src="../Photos/img2.jpg" alt="Image 2">
+      <img src="../Photos/img3.jpg" alt="Image 3">
+      <img src="../Photos/img4.jpg" alt="Image 4">  
+      <img src="../Photos/img5.jpg" alt="Image 5">
+    </div>
+  
+    <div class="radio-btn">
+      <input type="radio" id="R1" name="images">
+      <input type="radio" id="R2" name="images">
+      <input type="radio" id="R3" name="images">
+      <input type="radio" id="R4" name="images">
+    </div>
+  </main>
+
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>FIND US ON</h2>
+        <div class="content">
+          <p><B>Explore our services on social media </B></p>
+
+          <div class="Social-Media">
+            <a href="https://facebook.com">
+              <span class="fa-brands fa-facebook"></span> </a>
+          </div>
+          <div class="Social-Media">
+            <a href="https://instagram.com">
+              <Span class="fa-brands fa-square-instagram"></Span></a>
+          </div>
+
+          <div class="Social-Media">
+            <a href="https://facebook.com">
+              <Span class="fa-brands fa-linkedin"></Span></a>
+          </div>
+
+          <div class="Social-Media">
+            <a href="https://facebook.com">
+              <Span class="fa-brands fa-github"></Span></a>
+          </div>
+
+          <div class="text-justify">
+            <p>"Stay connected with Transits Pay and join our online community to receive the latest news and updates on
+              our innovative payment solutions.</p>
+          </div>
+          <span class="brand">Thank you for choosing <span style="color: #0dd6bb;">"Transits</span>
+            <span style="color: #f12020;">Pay!"</span></span>
+        </div>
+      </div>
+
+      <div class="center box">
+        <h2>About</h2>
+        <div class="content">
+
+          <div class="place">
+            <span class="fas fa-solid fa-bus"></span>
+            <span class="text">Transist &nbsp; Pay</span>
+          </div>
+
+          <div class="email">
+            <span class="fas fa-address-book"></span>
+            <span class="text">geenesh321@gmail.com</span>
+          </div>
+
+          <div class="icon-container">
+            <a href="Privacy.html">
+              <i class="fas fa-shield"></i>
+              <span class="icon-name">Privacy</span></a>
+          </div>
+
+          <div class="icon-container">
+            <a href="term.html">
+              <i class="fas fa-file"></i>
+              <span class="icon-name">Terms</span></a>
+          </div>
+
+          <div>
+            <div id="time">
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="right box">
+        <h2>Feedback</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email</div>
+              <input type="email" required placeholder="Enter Your Email">
+            </div>
+
+            <div class="msg">
+              <div class="text">Message</div>
+              <textarea rows="2" cols="25" required></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <center>
+        <span class="credit">Powered By <a href="CV.html"> ZeNaS Acharya</a> | </span>
+        <span class="far fa-copyright"></span><span> 2023 All rights reserved.</span>
+      </center>
+    </div>
+  </footer>
+
+  <script>
+    var count = 1
+    setInterval(function(){
+      document.querySelector('#R'+count).click();
+      count++;
+
+      if(count>4){
+        count = 1
+      }
+    },2000)
+  </script>
+
+</body>
+
+</html>

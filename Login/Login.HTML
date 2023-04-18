@@ -17,7 +17,12 @@
 
 
 
-    <div class="background"></div>
+    <div class="background">
+        <video autoplay muted loop id="myVideo">
+            <source src="../Photos/video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
 
     <div class="container">
 
@@ -31,10 +36,10 @@
                 <p>Sign up to Transit Pay and ride hassle-free</p>
 
                 <div class="social-icons">
-                    <a href="#"><i class='bx bxl-facebook-square'></i></a>
-                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/geenesh.acharya.5"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="https://www.instagram.com/geenesh_/"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.linkedin.com/in/geenesh-acharya-a06386187/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/Geenesh321"><i class='bx bxl-github'></i></a>
                 </div>
 
             </div>
@@ -59,12 +64,15 @@
                         </div>
 
 
+
+
                         <div class="remember-forgot">
                             <label> <input type="checkbox"> Remember me </label>
                             <a href="forgot.html">Forgot password?</a>
                         </div>
 
                         <button type="submit" class="btn">Sign In</button>
+
 
                         <div class="login-register">
                             <p>Don't have an account?
@@ -75,19 +83,19 @@
                 </div>
 
                 <div class="form-box register">
-                    <form action="#">
+                    <form action="#" class="signup">
                         <h2>Sign Up</h2>
 
                         <div class="input-box">
                             <span class="icon"><i class='bx bxs-user'> </i></span>
-                            <input type="text" required>
+                            <input type="text" required id="email">
                             <label>Name</label>
                         </div>
 
 
                         <div class="input-box">
                             <span class="icon"><i class='bx bxs-envelope'> </i></span>
-                            <input type="text" required>
+                            <input type="text" required id="password">
                             <label>Email</label>
                         </div>
 
@@ -98,9 +106,9 @@
                         </div>
 
                         <div class="input-box">
-                            <span class="icon"><i class='bx bxs-calendar-alt'></i></span>
-                            <input type="Date-OF-Birth" required>
-                            <label class="move">Birth Date</label>
+                            <span class="icon"><i class='bx bxs-building-house'></i></span>
+                            <input type="Text" required id="checkbox">
+                            <label class="move_o">Organization Name</label>
                         </div>
 
 
@@ -108,7 +116,8 @@
                             <label> <input type="checkbox"> I agree to the term & condition </label>
                         </div>
 
-                        <button id="button" class="next">Next</button>
+                        <button type="submit" class="btn">Sign Up</button>
+
 
                         <div class="login-register">
                             <p>Already have an account?
@@ -119,16 +128,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            const nextButton = document.getElementById("button");
-
-            nextButton.addEventListener("click", () => {
-                window.location.href = "card.html";
-            });
-        </script>
-
-
 </body>
 
 </html>

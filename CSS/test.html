@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Transit Calculator</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #f8f6f6;
+    }
+
+    th {
+      background-color: #a55353;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #423b3b;
+    }
+
+    /* Export to PDF */
+    #export-btn {
+      display: inline-block;
+      background-color: #a55353;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    #export-btn:hover {
+      background-color: #423b3b;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div class="Transaction">
+    <table id="transaction-table">
+      <br>
+      <thead>
+        <tr>
+          <th>S.N.</th>
+          <th>Card ID</th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+          <th>Amount</th>
+          <th>Date/Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>1234</td>
+          <td>-73.985428</td>
+          <td>40.748817</td>
+          <td>$50.00</td>
+          <td>2023-04-03 15:30:00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>5678</td>
+          <td>-73.986476</td>
+          <td>40.747645</td>
+          <td>$75.00</td>
+          <td>2023-04-02 10:15:00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>9101</td>
+          <td>-73.986476</td>
+          <td>40.747645</td>
+          <td>$25.00</td>
+          <td>2023-04-02 10:15:00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="export-btn">Export to PDF</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+  const exportBtn = document.getElementById('export-btn');
+  const table = document.getElementById('transaction-table');
+
+  exportBtn.addEventListener('click', () => {
+    const pdfName = 'Transaction.pdf';
+    const doc = new jsPDF('p', 'pt', 'a4');
+    const options = {
+      pagesplit: true,
+      background: '#fff',
+      useCORS: true
+    };
+
+    html2canvas(table, options)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        doc.addImage(imgData, 'PNG', 40, 40, 500, 500);
+        doc.save(pdfName);
+      });
+  });
+</script>
+</body>
+</html>

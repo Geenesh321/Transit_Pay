@@ -1,0 +1,22 @@
+{
+  "name": "transitpay",
+  "version": "1.0.0",
+  "description": "This is a the backend code for my college project",
+  "main": "./node/app.js",
+  "scripts": {
+    "start": "nodemon ./node/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jfa"
+  ],
+  "author": "Geenesh Acharya",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.4",
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.22"
+  }
+}

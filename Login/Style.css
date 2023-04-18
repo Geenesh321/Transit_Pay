@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Times New Roman', Times, serif;
-    /* font-family: 'Tangerine', serif; */
 }
 
 body{
@@ -15,11 +14,18 @@ body{
 .background{
     width: 100%;
     height: 100vh;
-    /* background: url('background.jpg') no-repeat; */
     background-size: cover;
     background-position: center;
     filter: blur(10px);
+    background-image: url(../Photos/login.jpeg);
 }
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
 
 .container {
     position: absolute;
@@ -28,8 +34,7 @@ body{
     transform: translate(-50%, -50%);
     width: 75%;
     height: 550px;
-    /* background: url(background.jpg) no-repeat; */
-    background: rgb(155, 10, 10);
+    background: url('../Photos/login.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -121,7 +126,7 @@ body{
 
 .form-box h2{
     font-size: 32px;
-    margin-top: -25px;
+    margin-top: -4px;
     text-align: center;
 }
 
@@ -135,11 +140,11 @@ body{
 
 .input-box input{
     width: 100%;
-    height: 100%;
+    height: 145%;
     background: transparent;
     border:none;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     color: #e4e4e4;
     font-weight: 500;
     padding-right: 28px;
@@ -189,23 +194,10 @@ body{
     text-decoration: underline;
 }
 
-.btn {
+.btn, .next {
     width: 100%;
     height: 45px;
-    background: red;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    color:#e4e4e4;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-}
-
-.next {
-    width: 100%;
-    height: 45px;
+    margin-top: 5%;
     background: red;
     border: none;
     outline: none;
@@ -237,10 +229,12 @@ body{
 
 /*Forgot Password*/
 
-.png{
-    width: 152px;
-    height: 152px;
+#png {
+    position: relative;
+    width: 139px;
+    height: 133px;
     margin-left: 89px;
+    top: -10px;
 }
 
 .form-box.Login .p{
@@ -267,31 +261,23 @@ body{
 }
 .payment_Photo{
     position:absolute;
-    right: 280px;
-    height: 9%;
+    right: 44%;
+    height: 8%;
     width: 52%;
     margin-top: 68%;
 }
 
-.move_Card{
-margin-left: 22px;
+.move_Name, .move_Card, .move_Expiry {
+    margin-left: 20px;   
+}
+.move_o{
+    margin-left:40px;
 }
 
-.move_Name{
-    margin-left: 40px;
-}
-
-.move_Expiry{
-    margin-left: 20px;
-}
-
-.move_Expiry{
-    margin-left: 20px;
-}
 .we_Accept{
-    margin-left: 3px;
-    margin-top: 10px;
+    margin-left: -3px;
+    margin-top: 32px;
     margin-bottom: -52%;
-    font-size: 99%;
+    font-size: 116%;
     font-weight:1000;
 }

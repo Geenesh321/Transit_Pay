@@ -1,0 +1,25 @@
+<main>
+    <h1>Users list</h1>
+    <p>List of all the users along with passwords...</p>
+    {{#if users }}
+    <div class="grid">
+        {{#each users}}
+        <article class="card product-item">
+            <header class="card__header">
+                <h1 class="product__title">{{ Name }}</h1>
+            </header>
+            
+            <div class="card__content">
+                <h2 class="product__price">{{Email}}</h2>
+                <p class="product__description">{{Password}}</p>
+            </div>
+            <div class="card__actions">
+                <button class="btn">{{OrganizationName}}</button>
+            </div>
+        </article>
+        {{/each}}
+    </div>
+    {{else}}
+    <h1>No Products Found</h1>
+    {{/if}}
+</main>

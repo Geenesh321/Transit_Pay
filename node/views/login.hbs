@@ -1,0 +1,115 @@
+<main>
+    <div class="background">
+        <video autoplay muted loop id="myVideo">
+            <source src="image/video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="container">
+
+        <div class="content">
+            <h1 class="logo"><i class='bx bxl-firebase'></i>Transit Pay</h1>
+
+
+            <div class="text-sci">
+                <h2>Welcome! <br> <span>Transit Pay simplifies your life</span></h2>
+
+                <p>Sign up to Transit Pay and ride hassle-free</p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/geenesh.acharya.5"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="https://www.instagram.com/geenesh_/"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.linkedin.com/in/geenesh-acharya-a06386187/"><i
+                            class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/Geenesh321"><i class='bx bxl-github'></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="logreg-box">
+                <div class="form-box Login">
+                    {{!-- <form action="/api/login" method="POST" id="signin_Form"> --}}
+                        <form action="/api/login" method="POST" id="signin_Form">
+                            <h2>Sign In</h2>
+
+
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-envelope'> </i></span>
+                                <input type="text" name="Email" required id="email">
+                                <label>Email</label>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                                <input type="password" name="Password" required id="password">
+                                <label class="move">Password</label>
+                            </div>
+
+                            <div class="remember-forgot">
+                                <label> <input type="checkbox"> Remember me </label>
+                                <a href="forgot.html">Forgot password?</a>
+                            </div>
+
+                            <button type="submit" class="btn">
+                                <a href="http://localhost:4000/firstpage">Sign In</a>
+                            </button>
+                            <a href="./Firstpage.hbs" class="btn">Sign In</a>
+
+
+                            <div class="login-register">
+                                <p>Don't have an account?
+                                    <a href="#" class="register-link">Sign up</a>
+                                </p>
+                            </div>
+                        </form>
+                </div>
+
+                <div class="form-box register">
+                    <form action="/api/user" method="POST" class="signup">
+                        <h2>Sign Up</h2>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'> </i></span>
+                            <input type="text" name="Name" required id="email">
+                            <label>Name</label>
+                        </div>
+
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'> </i></span>
+                            <input type="text" name="Email" required id="password">
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" name="Password" required>
+                            <label class="move">Password</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-building-house'></i></span>
+                            <input type="Text" name="OrganizationName" required id="checkbox">
+                            <label class="move_o">Organization Name</label>
+                        </div>
+
+
+                        <div class="remember-forgot">
+                            <label> <input type="checkbox"> I agree to the term & condition </label>
+                        </div>
+
+                        <button type="submit" class="btn">Sign Up</button>
+
+
+                        <div class="login-register">
+                            <p>Already have an account?
+                                <a href="" class="login-link">Sign In</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</main>
